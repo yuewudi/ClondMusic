@@ -1,5 +1,6 @@
 package dao.impl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import dao.prototype.ISongDao;
 import entity.Song;
+import util.DateUtil;
 
 @Repository
 public class SongDaoImpl implements ISongDao {
@@ -20,19 +22,9 @@ public class SongDaoImpl implements ISongDao {
 	@Override
 	public void addSong(Song song) {
 		// TODO Auto-generated method stub
-		String sql = "insert into t_song(song_name,type_id,song_time,song_url,song_image,song_words,description,is_vip,status,song_author,song_create_time) values("
-				+ song.getSongName() + "','"
-				+ song.getSongAuthor() + "',"
-				+ song.getTypeId() + ",'"
-				+ song.getSongTime() + "','"
-				+ song.getSongUrl() + "','"
-				+ song.getSongImage() + "','"
-				+ song.getSongWords() + "','"
-				+ song.getDescription() + "',"
-				+ song.isVip() + ","
-				+ song.isStatus() + ","
-				+ song.getSong_create_time() + ")";
-		jt.update(sql);
+		String sql = "insert into t_song(id,song_name,song_author,type_id,song_create_time,song_url,song_image,song_words,description,is_vip,status,song_time,uploader_id )values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		Object[] obj = new Object[]{song.getId(),song.getSongName(),song.getSongAuthor(),song.getTypeId(),DateUtil.formate(new Date(), "yyyy-MM-dd HH:mm:ss"),song.getSongUrl(),song.getSongImage(),song.getSongWords(),song.getDescription(),song.isVip(),song.isStatus(),song.getSongTime(),song.getUploaderId()};
+		jt.update(sql,obj);
 	}
 
 	@Override
@@ -81,11 +73,31 @@ public class SongDaoImpl implements ISongDao {
 	}
 
 	@Override
-	public List<Song> findAll() {
+	public List<Song> findAllSongs() {
 		// TODO Auto-generated method stub
 		return jt.query("select * from t_song", new BeanPropertyRowMapper<Song>(Song.class));
 	}
-	
-	
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		int i = 0;
+		List<Song> songs = jt.query("select * from t_song", new BeanPropertyRowMapper<Song>(Song.class));
+		for (Song song : songs) {
+			i++;
+		}
+		return i;
+	}
+
+	@Override
+	public List<Song> newSong() {
+		// TODO Auto-generated method stub
+		return jt.query("select * from t_song order by song_create_time desc limit 100", new BeanPropertyRowMapper<Song>(Song.class));
+	}
+
+	@Override
+	public List<Song> searchByUploaderId(int uploaderId) {
+		return jt.query("select * from t_song where uploader_id=? order by song_create_time desc limit 100",new Object[]{uploaderId}, new BeanPropertyRowMapper<Song>(Song.class));
+	}
 
 }

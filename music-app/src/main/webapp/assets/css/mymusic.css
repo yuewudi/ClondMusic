@@ -496,6 +496,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
     margin-top:5px;
     font-size:11px;
     color: #6e6e6e;
+    overflow: hidden;
 }
 .mymusic-comment{
     width:100%;

@@ -9,7 +9,25 @@
     <link rel="stylesheet" href="assets/css/foot.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <script src="assets/js/jquery.js"></script>
-    
+    <script>
+        $(function () {
+            $('.uh').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+                }
+            )
+
+
+            $('.pull').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+            })
+        })
+
+
+    </script>
     
     <script type="text/javascript">
     

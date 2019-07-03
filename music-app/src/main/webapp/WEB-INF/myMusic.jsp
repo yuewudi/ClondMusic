@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="assets/css/mymusic.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/index.js"></script>
+    <script src="assets/js/validate.js"></script>
 </head>
 <body>
 
@@ -42,11 +44,11 @@
                 <div><a href="/music/index">发现音乐</a></div>
                 <div><a href="/music/myMusic?userid=${user.getId() }">我的音乐</a></div>
                 <div><a href="/music/MV">发现视频</a></div>
-                <div><a href="">热门排行榜</a></div>
+                <div><a href="/music/rank">热门排行榜</a></div>
             </div>
         </div>
         <div class="right">
-            <div class="seek">音乐/视频/用户</div>
+            <a href="/music/search" class="seek" >音乐/视频/用户</a>
             <div class="loginButton" style="display:${none}">
                 <a href="javascript:;">用户登陆</a>           
             </div>

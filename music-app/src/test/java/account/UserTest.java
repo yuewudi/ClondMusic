@@ -54,14 +54,7 @@ public class UserTest {
 		List<User> user= userService.findByAccount("123123");
 		System.out.println(user);
 	}
-	@Test
-	public void testFindAllSong(){
-		List<Song> sons = songService.findAll();
-		for (Song song : sons) {
-			System.out.println(song);
-		}
-	}
-	
+
 	
 	@Test
 	public void testFindcollect(){

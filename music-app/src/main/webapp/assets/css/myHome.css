@@ -62,7 +62,6 @@ img.head{
 .sex{
     font-size: 21px;
     margin-left: 10px;
-    color: dodgerblue;
 }
 .edit{
     display: block;
@@ -114,12 +113,12 @@ img.head{
     font-weight: bold;
 }
 .table-position{
-    width: 902px;height: 381px;
+    width: 902px;height: auto;
     overflow: hidden;
     margin: auto;
 }
 .song-table{
-    width: 900px;height: 380px;
+    width: 900px;height: auto;
     margin: auto;
     border-left: 1px solid rgb(200,200,200);
     border-right: 1px solid rgb(200,200,200);
@@ -131,7 +130,7 @@ img.head{
     color: rgb(100,100,100);
     line-height: 38px;
 }
-.song:nth-child(2),.song:nth-child(4),.song:nth-child(6),.song:nth-child(8),.song:nth-child(10){
+.song:nth-child(even){
     background: rgb(245,245,245);
 }
 .song:hover{

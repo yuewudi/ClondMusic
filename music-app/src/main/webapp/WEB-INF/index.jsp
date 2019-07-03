@@ -44,7 +44,7 @@
                 <div><a href="/music/index">发现音乐</a></div>
                 <div><a href="/music/myMusic?userid=${user.getId() }">我的音乐</a></div>
                 <div><a href="/music/MV">发现视频</a></div>
-                <div><a href="">热门排行榜</a></div>
+                <div><a href="/music/rank">热门排行榜</a></div>
             </div>
         </div>
         <div class="right">

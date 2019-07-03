@@ -52,9 +52,29 @@ public class SongServiceDaoImpl implements ISongService{
 	}
 
 	@Override
-	public List<Song> findAll() {
+	public List<Song> findAllSongs() {
 		// TODO Auto-generated method stub
-		return songDao.findAll();
+		return songDao.findAllSongs();
 	}
+
+	@Override
+	public int count() {
+		// TODO Auto-generated method stub
+		return songDao.count();
+	}
+
+	@Override
+	public List<Song> newSong() {
+		// TODO Auto-generated method stub
+		return songDao.newSong();
+	}
+
+	@Override
+	public List<Song> searchByUploaderId(int uploaderId) {
+		// TODO Auto-generated method stub
+		return songDao.searchByUploaderId(uploaderId);
+	}
+	
+	
 
 }
