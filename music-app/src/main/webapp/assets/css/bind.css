@@ -1,0 +1,31 @@
+body{
+    margin: auto;
+    padding: auto;
+    background:rgb(245,245,245);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input{
+    outline:none;
+}
+.bind-box{
+    height: 800px;width: 980px;
+    background: white;
+    margin: auto;
+    border-left:1px solid rgb(200,200,200);
+    border-right:1px solid rgb(200,200,200);
+}
+.bind-title{
+    font-size: 24px;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+.bind-area{
+    margin:20px 30px;
+    position: relative;
+}
+.bind-area p{
+    padding: 5px;
+}

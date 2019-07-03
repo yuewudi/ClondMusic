@@ -1,0 +1,162 @@
+body{
+    margin: auto;
+    padding: auto;
+    background:rgb(245,245,245);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.home-box{
+    height: 100%;width: 980px;
+    background: white;
+    margin: auto;
+    border-left:1px solid rgb(200,200,200);
+    border-right:1px solid rgb(200,200,200);
+}
+.mine{
+    width: 900px;height: 194px;
+    margin:auto;
+    padding-top: 30px;
+}
+img.head{
+    display: block;
+    width: 180px;
+    height: 180px;
+    padding: 3px;
+    background: #fff;
+    border: 1px solid #d5d5d5;
+    float: left;
+}
+.message{
+    width: 670px;height: 194px;
+
+    float: right;
+}
+.message-title{
+    width: 670px;height: 36px;
+    margin-top: 5px;
+
+}
+.message-title span{
+    line-height: 36px;
+    font-weight: bold;
+}
+.nickname{
+    font-size: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-family: "微软雅黑";
+
+}
+.lv{
+    color: #E03A24;
+    border: 1px solid #E03A24;
+    border-radius: 25%;
+    margin-left: 10px;
+    padding-left:5px;
+    padding-right:5px;
+}
+.sex{
+    font-size: 21px;
+    margin-left: 10px;
+    color: dodgerblue;
+}
+.edit{
+    display: block;
+    float: right;
+    margin-top: 2px;
+    height: 31px;
+    width: 112px;
+    overflow: hidden;
+    line-height: 31px;
+    font-size: 12px;
+    text-align: center;
+    border: 1px solid rgb(100,100,100);box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(100,100,100);
+    background: rgb(240,240,240);
+    box-shadow: darkgray 0px 2px 5px 0px;
+}
+.edit:hover{
+    background: white;
+}
+.hr{
+    width: 670px;
+    height: 10px;
+    border-bottom:1px solid rgb(200,200,200);
+}
+.message-no,.message-phone,.message-introduce{
+    margin-top: 5px;
+    height: 36px;width: 670px;
+    font-size: 16px;
+    color:rgb(100,100,100);
+}
+.my-title{
+    width:900px;height: 36px;
+    margin:auto;
+    margin-top: 25px;
+    line-height: 36px;
+    border-bottom:2px solid #E03A24;box-sizing: border-box;
+    font-size: 20px;
+    color: rgb(100,100,100);
+}
+.total{
+    font-size: 12px;
+}
+.time{
+    font-size: 12px;
+    float: right;
+}
+.onshow{
+    font-weight: bold;
+}
+.table-position{
+    width: 902px;height: 381px;
+    overflow: hidden;
+    margin: auto;
+}
+.song-table{
+    width: 900px;height: 380px;
+    margin: auto;
+    border-left: 1px solid rgb(200,200,200);
+    border-right: 1px solid rgb(200,200,200);
+    border-bottom: 1px solid rgb(200,200,200);
+}
+.song{
+    width: 900px;height: 38px;
+    font-size: 16px;
+    color: rgb(100,100,100);
+    line-height: 38px;
+}
+.song:nth-child(2),.song:nth-child(4),.song:nth-child(6),.song:nth-child(8),.song:nth-child(10){
+    background: rgb(245,245,245);
+}
+.song:hover{
+    background: rgb(235,235,235);
+
+}
+.song-no{
+    width: 36px;height: 38px;
+    text-align: right;
+    display: inline-block;
+}
+.song-name{
+    font-weight: bold;
+}
+.song-name:hover{
+    text-decoration:underline;
+}
+.singer{
+    font-size: 12px;
+}
+.count{
+    width: 120px;height: 38px;
+    padding-left: 10px;
+    text-align: left;
+    display: inline-block;
+    float: right;
+    background: rgba(100,100,255,.2);
+}

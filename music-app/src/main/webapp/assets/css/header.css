@@ -1,0 +1,158 @@
+/*导航栏*/
+header{
+    width: 100%;
+    height: 70px;
+    background: #000;
+}
+header a{
+    text-decoration: none;
+}
+.top{
+	position:relative;
+    margin: auto;
+    height: 70px;
+    width: 1100px ;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.left{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.left .logo{
+    height: 69px;
+    width: 179px;
+    background:url("../images/topbar.png") no-repeat 0 0px;
+}
+.left .logo a{
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
+.left .option{
+    height: 100%;
+    width: 508px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 14px;
+    color: #cccccc;
+    margin-right: 75px;
+}
+
+.left .option div{
+    width: 20%;
+    height: 100%;
+
+}
+.left .option a{
+    float: left;
+    width: 100%;
+    height: 100%;
+    color: #cccccc;
+    text-align: center;
+    line-height: 70px;
+}
+.left .option a:hover{
+    color: #ffffff;
+}
+.right{
+	
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .seek{
+
+	cursor:auto;
+    width: 158px ;
+    height: 32px;
+    border-radius: 30px;
+    background: url("../images/topbar.png") no-repeat 0px -98px #ffffff;
+    color: #9b9b9b;
+    font-size: 12px;
+    line-height: 32px;
+    padding-left: 30px;
+}
+
+
+.right .loginButton{
+    height: 32px;
+    width: 90px;
+    border: 1px  solid  #4f4f4f;
+    border-radius: 20px;
+	
+}
+.right .loginButton a{
+    color: #ffffff;
+    font-size:14px;
+    text-align: center;
+    line-height: 32px;
+    padding-left: 15px;
+}
+.right .loginButton:hover{
+    border: 1px  solid  #ffffff;
+}
+
+
+
+.uh{
+
+    width: 60px;
+    height: 60px;
+    margin-right: 25px;
+    margin-top: 20px;
+
+
+}
+.uh{
+	display:none;
+	width: 60px;
+    height: 60px;
+}
+.userHeader{
+    width: 40px;
+    height: 40px;
+    border:  1px solid red;
+    border-radius: 50%;
+}
+
+.loginOut{
+    height: 25%;
+    text-align: center;
+    width: auto;
+
+}
+.loginOut:hover{
+
+    background: #3b3b3b;
+}
+.loginOut a{
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    color: #ccc;
+}
+.loginOut a:hover{
+    color: #ffffff;
+}
+
+.pull{
+    width: 100px;
+    height: 100px;
+    border: 1px solid #202020;
+    box-shadow: 0 8px 24px 0 rgba(0,0,0,0.50);
+    position: absolute;
+    background: #000000;
+    right: 10px;
+    bottom: -90px;
+    z-index: 10000;
+    display: none;
+}

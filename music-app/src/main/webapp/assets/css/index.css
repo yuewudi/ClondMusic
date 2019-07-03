@@ -1,0 +1,531 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(245, 245, 245);
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li,ul,p,h1,h2,h3{
+    font-size: 0;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/*登陆*/
+
+.close{
+    float: right;
+    font-size: 25px;
+    color: #cccccc;
+    cursor: pointer;
+}
+.close:hover{
+    color: red;
+}
+.login{
+    display: none;
+    position: absolute;
+    box-shadow: 0 5px 16px rgba(0,0,0,0.8);
+    top:120px;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 530px;
+    height: 313px;
+    z-index: 999;
+
+}
+.login-top{
+    border-radius: 5px 5px 0 0;
+    border:1px solid #191919;
+    float: left;
+    height: 39px;
+    width: 510px;
+    background-color: #000000;
+    color: #ffffff;
+    line-height: 38px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+.login-bottom{
+    border-radius: 0 0 5px 5px ;
+    float: left;
+    background: #ffffff;
+    width: 100%;
+    height: 274px;
+    border: 1px solid #878787;
+}
+
+form{
+    margin-top: 70px;
+    height: 200px;
+
+}
+table{
+    text-align: justify;
+     height: 150px;
+}
+td a:hover{
+    text-decoration: underline;
+}
+.button{
+    cursor: pointer;
+    width: 80px;
+    height: 30px;
+    border-radius: 6px;
+    background: url("../images/button2.png") no-repeat -5px -390px;
+}
+.hint{
+    width: 175px;
+    height: 45px;
+}
+.error{
+    color:red;
+}
+.signPage{
+    display: none;
+    padding-left: 100px;
+    margin-top: -20px;
+}
+.signButton{
+    height: 30px;
+    width: 100px;
+}
+
+
+
+
+
+
+/*轮播图*/
+.viewPage{
+    width: 100%;
+    height: 336px;
+    background:url("../images/lunboback1");
+
+}
+.box{
+    width: 982px;
+    height: 336px;
+    margin: auto;
+    position: relative;
+}
+
+.dinner{
+    position: relative;
+    float: left;
+    width: 730px;
+    height: 336px;
+}
+.pageOne{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    z-index: 4;
+}
+.pageTwo{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.pageThree{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+.pageFour{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+.page a{
+    height: 100%;
+    width: 100%;
+}
+.box .btns{
+    height: 20px;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    bottom: 20px;
+    z-index: 99;
+}
+.btn{
+    height: 10px;
+    width: 10px;
+    border-radius:50% ;
+    background: #fff;
+}
+.btn:nth-child(1){
+    background: red;
+}
+
+.box-right{
+    position: relative;
+    float: left;
+    width: 252px;
+    height: 100%;
+    background: url("../images/download.png") no-repeat;
+
+}
+.box-right div{
+    cursor: pointer;
+    position: absolute;
+    bottom: 68px;
+    left: 19px;
+    width: 212px;
+    height: 53px;
+}
+.box-right div:hover{
+    background: url("../images/download.png") no-repeat 0 -343px;
+}
+
+
+
+/*下面的板块*/
+
+.bigModel{
+    background: #ffffff;
+    width: 980px;
+    height: 1390px;
+    margin: auto;;
+}
+
+.bigModel-right{
+    float: right;
+    width: 248px;
+    height: 100%;
+    background: url("../images/music.jpg")  -400px 0px ;
+    border-right: 1px solid #d3d3d3;
+
+}
+
+.midModel{
+    border:  solid #d3d3d3;
+    border-width: 0 1px;
+    float: left;
+    padding: 20px 20px 40px;
+    background: #ffffff;
+}
+.hot{
+    width: 689px;
+    height: 523px;
+}
+.hotTop{
+    height: 33px;
+    padding: 0px 10px 0px 34px;
+    background: url("../images/index.png") no-repeat -225px -156px;
+    border-bottom: 2px solid rgb(193, 13, 12);
+}
+.hotTop a{
+    float: left;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 28px;
+}
+.hotTop span{
+    float: right;
+    width: 40px;
+    height: 16px;
+    background: url("../images/index.png") no-repeat  30px -238px;
+    margin-top: 10px;
+}
+.hotTop span a{
+    font-size: 12px;
+    line-height: 15px;
+}
+.hotTop span a:hover{
+    text-decoration: underline;
+}
+.hotBottom {
+    width: 731px;
+    height: 468px;
+    margin: 20px 0 0 -42px;
+}
+.hotBottom li{
+    float: left;
+    width: 140px;
+    height: 203px;
+    padding:  0 0 30px 42px;
+
+}
+.liTop{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+}
+.lliTopa{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    height: 100%;
+    background:url("../images/coverall.png") no-repeat 0 0;
+}
+.liTopBottom{
+    font-size: 12px;
+    line-height: 27px;
+    color: #ccc;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: 27px;
+    width: 100%;
+    z-index: 3;
+    background: url("../images/coverall.png ") no-repeat 0 -537px;
+}
+.liTopBottoma{
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    width: 16px;
+    height: 17px;
+    background: url("../images/iconall.png") no-repeat 0 0;
+}
+.liTopBottoma:hover{
+    background-position: 0 -60px;
+}
+.listen{
+    float: left;
+    width: 14px;
+    height: 11px;
+    background: url("../images/iconall.png") no-repeat 0 -24px;
+    margin: 9px 5px 9px 10px;
+
+}
+.playNum{
+    float: left;
+}
+li p{
+    font-size: 14px;
+    margin-top: 7px;
+}
+li p:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.new{
+    height: 243px;
+}
+.newBottom{
+    position: relative;
+    zoom: 1;
+    height: 186px;
+    margin: 20px 0 37px;
+    border: 1px solid #d3d3d3;
+}
+.inner{
+    height: 184px;
+    padding-left: 16px;
+    background: #f5f5f5;
+    border: 1px solid #fff;
+}
+.roll{
+    position: relative;
+    width: 645px;
+    height: 180px;
+    overflow:hidden;
+}
+.roll ul{
+    float: left;
+    position: absolute;
+    top: 0;
+    height: 150px;
+    width: 645px;
+    margin: 28px 0 0 0;
+}
+.roll ul:nth-child(2){
+    left: 645px;
+}
+.roll ul:nth-child(3){
+    left: 645px;
+}
+.roll ul:nth-child(4){
+    left: -645px;
+}
+
+.roll ul li{
+
+    float: left;
+    display: inline;
+    width: 118px;
+    height: 150px;
+    margin-left: 11px;
+    background:url("../images/index.png") no-repeat -260px 100px;
+
+}
+.li-div{
+    cursor: pointer;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 7px;
+}
+.li-a-one{
+    width: 118px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/coverall.png") no-repeat 0 -570px;
+}
+.li-a-two{
+    position: absolute;
+    z-index: 5;
+    bottom: 0;
+    display: block;
+    left: 72px;
+    width: 22px;
+    height: 22px;
+    background: url("../images/iconall.png") no-repeat 0 -85px;
+}
+.li-div:hover .li-a-two{
+    display: block;
+}
+.roll ul li p{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+    font-size: 12px;
+    margin: 0;
+}
+.inner-left{
+    cursor: pointer;
+    position: absolute;
+    top: 71px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/index.png") no-repeat -260px -75px;
+}
+.inner-left:hover{
+    background-position: -280px -75px;
+}
+.inner-right{
+    cursor: pointer;
+    position: absolute;
+    right: 7px;
+    top: 71px;
+    width: 17px;
+    height: 17px;
+    background: url("../images/index.png") no-repeat -300px -75px;
+}
+.inner-right:hover{
+    background-position: -320px -75px;
+}
+
+
+
+.topN{
+    margin-top: 37px;
+    height: 527px;
+}
+.tonN-bottom{
+    float: left;
+    width: 695px;
+    height: 472px;
+    margin-top: 20px;
+    padding-left: 1px;
+    background: url("../images/topN.png") no-repeat ;
+}
+.soaring{
+    float: left;
+    width: 230px;
+}
+.soaring-top{
+    float: left;
+    height: 100px;
+    width: 210px;
+    padding: 20px 0 0 19px;
+}
+.soaring-top div{
+    float: left;
+}
+.soaring-top img{
+
+    width: 80px;
+    height: 80px;
+}
+.soaring-top-right{
+    width: 116px;
+    margin: 6px 0 0 10px;
+    font-size: 14px;
+}
+.soaring-top-right h3{
+    font-size: 14px;
+}
+.soaring-top-right h3:hover{
+    text-decoration: underline;
+}
+.soaring-bottom{
+    float: left;
+    height: 352px;
+    width: 230px;
+}
+.soaring-bottom li{
+    float: right;
+    height: 32px;
+    width: 170px;
+    color: #666;
+}
+.soaring-bottom li span{
+    float: left;
+    position: relative;
+    width: 35px;
+    height: 32px;
+    margin-left: -35px;
+    text-align: center;
+
+    font-size: 16px;
+    line-height: 32px;
+
+}
+
+.one{
+    color: red;
+}
+.soaring-bottom li a{
+    float: left;
+    width: 150px;
+    height: 32px;
+    font-size: 12px;
+    line-height: 32px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.soaring-bottom li a:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,82 @@
+body {
+    margin: auto;
+    padding: auto;
+    background: rgb(245, 245, 245);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+input, textarea {
+    outline: none;
+}
+
+.edit-box {
+    height: 800px;
+    width: 980px;
+    background: white;
+    margin: auto;
+    border-left: 1px solid rgb(200, 200, 200);
+    border-right: 1px solid rgb(200, 200, 200);
+}
+
+.edit-title {
+    font-size: 24px;
+    padding-top: 30px;
+    margin-left: 30px;
+}
+
+.edit-area {
+    margin: 20px 30px;
+    position: relative;
+}
+
+.edit-area p {
+    padding: 5px;
+}
+
+.head-img {
+    width: 140px;
+    height: 140px;
+    border: 1px solid #d5d5d5;
+    position: absolute;
+    left: 350px;
+    
+
+}
+
+.replace {
+    width: 140px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 110px;
+    background: rgba(200, 200, 200, .6);
+    text-align: center;
+    z-index: 1;
+}
+
+.replace a {
+    color: white;
+    font-size: 12px;
+}
+
+.replace a:hover {
+    text-decoration: underline;
+}
+
+.submit {
+    width: 80px;
+    height: 30px;
+    box-shadow: .05em .1em .2em rgba(0, 0, 0, .6) inset;
+    border-color: rgba(0, 0, 0, .3);
+    border-radius: 10%;
+    background: #6666ff;
+    color: white;
+    cursor: pointer;
+}
+
+.submit:hover {
+    background: #7777ff;
+}

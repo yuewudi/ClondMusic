@@ -1,0 +1,249 @@
+body{
+    padding: 0;
+    margin: auto;
+    background: rgb(245,245,245);
+}
+
+
+.denglu{
+    margin: auto;
+    position:relative;
+    background: rgb(255,255,255);
+    width: 1000px;
+    height: auto;
+    border-right: rgb(211 211 211) solid  1px;
+    border-left: rgb(211 211 211) solid 1px;
+}
+.denglu-left{
+    float: left;
+    width: 70%;
+}
+.usermp4{
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-bottom: rgb(211 211 211) solid 1px;
+}
+.shipingpinglun {
+    width: 80%;
+    height: auto;
+    position: relative;
+    left: 40px;
+    display: none;
+}
+.pinglunkuang{
+    position: relative;
+    left: 30px;
+    top: 20px;
+    width: 90%;
+    height: 120px;
+}
+.butt{
+    position: relative;
+    left: 450px;
+    top: 5px;
+}
+.lishipinglun {
+    position: relative;
+    left: 30px;
+    top: 20px;
+    width: 90%;
+    height: 60px;
+    background: rgb(205,205,205);
+    border-bottom: rgb(245 245 245) solid 2px;
+}
+.pinglunHead{
+    float: left;
+    position: relative;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+}
+.pinglunName {
+    float: left;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    height: 40px;
+}
+.pinglunName:nth-child(2) {
+    color: #6cabc5;
+}
+.pinglunName:nth-child(3) {
+    left: 20px;
+}
+.pinglunName:nth-child(4) {
+    position: absolute;
+    font-size: 13px;
+    top: 35px;
+    left: 50px;
+}
+.kaung{
+    resize:none;
+    float: left;
+    width: 95%;
+    height: 80px;
+}
+.touxiang{
+    float: left;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+}
+.shiping0{
+    width: 350px;
+    float: left;
+    position: relative;
+    top: 110px;
+    left: 100px;
+}
+.xingming{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    width: 80%;
+    height: 20px;
+
+}
+.time{
+    font-size: 12px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 80%;
+    height: 20px;
+
+}
+.pinglun{
+    text-decoration: none;
+    float: right;
+    font-size: 14px;
+    position: absolute;
+    right: 40px;
+    top: 320px;
+    height: 20px;
+}
+.ganyan{
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    width: 80%;
+    height: 20px;
+
+}
+.denglu-right{
+    float: right;
+    width: 30%;
+    height: 500px;
+    background-color: rgb(251 251 251);
+}
+
+.user{
+    position: relative;
+    background-color: rgb(238 238 238);
+    width: 100%;
+    height: 200px;
+    border-bottom: rgb(194 194 194) solid 1px;
+}
+.userImage{
+    float: left;
+    position: relative;
+    left: 20px;
+    top: 40px;
+    width: 65px;
+    height: 65px;
+    background-color: black;
+}
+.userName{
+    font-size: 15px;
+    float: left;
+    position: relative;
+    left: 40px;
+    top: 40px;
+    width: 150px;
+    height: 25px;
+
+}
+.shi1{
+    text-decoration: none;
+    color: rgb(102 102 102);
+    float: left;
+    position: absolute;
+    left: 20px;
+    top: 160px;
+    width: 45px;
+    height: 25px;
+    border-right: rgb(194 194 194) solid 1px;
+}
+.shi1:nth-child(4){
+
+    left: 80px;
+}
+.shi1:nth-child(5){
+    border-right: rgb(194 194 194) solid 0px;
+    left: 140px;
+}
+
+
+.clearfloat{clear:both}
+.zuihou{
+    border-top: rgb(200 200 200)solid 1px;
+    position: relative;
+    width: 100%;
+    height: 149px;
+    background-color: rgb(242 242 242);
+}
+.zuihou1{
+    margin: auto;
+    position:relative;
+    width: 1000px;
+    height: 100%;
+    color: rgb(153 153 153);
+    font-size: 12px;
+}
+.zuihou11{
+
+    height: 20px;
+}
+.zuihou1 a{
+    color: rgb(153 153 153);
+    font-size: 12px;
+    text-decoration: none;
+}
+.zuihou12{
+    color: rgb(125 125 125);
+    position: relative;
+    top: 40px;
+    height: 50px;
+    width: 48%;
+}
+.zuihou13{
+    cursor:pointer;
+    float: right;
+    position: relative;
+    top: -60px;
+    right: 0;
+    width: 9%;
+    height: 55%;
+    background-image: url("../images/bottom1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.lishipinglun0 {
+    position: relative;
+    left: 30px;
+    top: 200px;
+    width: 90%;
+    height: 20px;
+}
+.zuihou13:nth-child(10){
+    background-image: url("../images/bottom2.png");
+}
+.zuihou13:nth-child(11){
+    background-image: url("../images/bottom3.png");
+}
+.zuihou13:nth-child(12){
+    background-image: url("../images/bottom4.png");
+}

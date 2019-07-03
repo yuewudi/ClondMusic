@@ -1,0 +1,140 @@
+body{
+    margin: auto;
+    padding: auto;
+    background:rgb(245,245,245);
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.vip-box{
+    height: 100%;width: 980px;
+    background: white;
+    margin: auto;
+    border-left:1px solid rgb(200,200,200);
+    border-right:1px solid rgb(200,200,200);
+}
+.mine{
+    width: 980px;height: 194px;
+    padding-top: 30px;
+    margin:auto;
+    background:rgb(243,244,246) url("../images/vip-bg.jpg") no-repeat bottom right;
+    border-bottom: 1px solid rgb(200,200,200);
+}
+img.head{
+    display: block;
+    width: 120px;
+    height: 120px;
+    padding: 3px;
+    background: #fff;
+    margin-left: 50px;
+    border: 1px solid #d5d5d5;
+    float: left;
+}
+.message{
+    width: 750px;height: 194px;
+    float: right;
+}
+.message-title{
+    width: 670px;height: 36px;
+    margin-top: 5px;
+
+}
+.message-title span{
+    line-height: 36px;
+    font-weight: bold;
+}
+.nickname{
+    font-size: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+    font-family: "微软雅黑";
+
+}
+.vip-icon{
+
+    line-height:25px;
+    margin-left: 5px;
+    color: darkgray;
+}
+.vip-enable{
+    margin-top: 20px;
+}
+.recharge{
+    width: 980px;height: 750px;
+    padding-top: 30px;
+    margin:auto;
+    background:white;
+}
+.vip-img{
+    width: 980px;height: 320px;
+    padding-top: 30px;
+    margin:auto;
+    background:url("../images/vip-img.jpg") no-repeat center center;
+}
+.types{
+    width: 910px;height: 144px;;
+    margin:auto;
+    background:white;
+}
+.type{
+    width: 187.5px;height: 144px;
+    border: 1px solid rgb(220,220,220);box-sizing: border-box;
+    margin: 0 20px;
+    float: left;
+    text-align:center;
+    color: rgb(100,100,100);
+}
+.active{
+    border: 1px solid red;box-sizing: border-box;
+}
+.line-one{
+    margin-top: 10px;
+    font-size:14px ;
+}
+.price{
+    font-size: 30px;
+}
+.old{
+    text-decoration:line-through;
+    color: #999999;
+}
+.desc{
+    color: #999999;
+    font-size: 14px;
+}
+.month{
+    font-size: 12px;
+    line-height: 12px;
+}
+.pay-title{
+    margin:20px 50px;
+    line-height: 20px;
+}
+.pay-box{
+    width: 875px;height: 142px;
+    margin: auto;
+    overflow: hidden;
+}
+.pay{
+    width: 875px;height: 142px;
+    margin: auto;
+    position: relative;
+    border: 1px solid rgb(220,220,220);box-sizing: border-box;
+}
+.pay-ma{
+    width: 100px;height: 100px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+.pay-desc{
+    width: 735px;height:142px;
+    margin-left: 140px;
+    position: absolute;
+}
+.pay-price{
+    font-size: 44px;
+}

@@ -1,0 +1,52 @@
+.zuihou{
+    border-top: rgb(200 200 200)solid 1px;
+    width: 100%;
+    height: 149px;
+    position: relative;
+    background-color: rgb(242 242 242);
+}
+.zuihou1{
+    margin: auto;
+    position:relative;
+    width: 980px;
+    height: 100%;
+    color: rgb(153 153 153);
+    font-size: 12px;
+}
+.zuihou11{
+
+    height: 20px;
+}
+.zuihou1 a{
+    color: rgb(153 153 153);
+    font-size: 12px;
+    text-decoration: none;
+}
+.zuihou12{
+    color: rgb(125 125 125);
+    position: relative;
+    top: 40px;
+    height: 50px;
+    width: 48%;
+}
+.zuihou13{
+    cursor:pointer;
+    float: right;
+    position: relative;
+    top: -60px;
+    right: 0;
+    width: 9%;
+    height: 55%;
+    background-image: url("../images/bottom1.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.zuihou13:nth-child(10){
+    background-image: url("../images/bottom2.png");
+}
+.zuihou13:nth-child(11){
+    background-image: url("../images/bottom3.png");
+}
+.zuihou13:nth-child(12){
+    background-image: url("../images/bottom4.png");
+}
