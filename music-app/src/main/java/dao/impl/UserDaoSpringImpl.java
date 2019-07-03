@@ -52,8 +52,8 @@ public class UserDaoSpringImpl implements IUserDao{
 	@Override
 	public void updateUser(User user) {
 		
-		String sql = "update t_user set nick_name=?,description=?,sex=?,phone=?,header=? where id ="+user.getId();
-		Object[] obj = new Object[]{user.getNickName(),user.getDescription(),user.isSex(),user.getPhone(),user.getHeader()};
+		String sql = "update t_user set nick_name=?,description=?,sex=?,phone=?,header=?,grade=? where id ="+user.getId();
+		Object[] obj = new Object[]{user.getNickName(),user.getDescription(),user.isSex(),user.getPhone(),user.getHeader(),user.getGrade()};
 		jt.update(sql,obj);
 		
 		
