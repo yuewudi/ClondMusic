@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>我的主页</title>
-<link rel="stylesheet" href="assets/css/myHome.css">
+<link rel="stylesheet" href="assets/css/myhome.css">
 <link rel="stylesheet" href="assets/css/foot.css">
 <link rel="stylesheet" href="assets/css/header.css">
     <script src="assets/js/jquery.js"></script>

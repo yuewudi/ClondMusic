@@ -98,7 +98,7 @@ img.head{
     margin:auto;
     margin-top: 25px;
     line-height: 36px;
-    border-bottom:2px solid #E03A24;box-sizing: border-box;
+    border-bottom:2px solid rgb(100,100,193);box-sizing: border-box;
     font-size: 20px;
     color: rgb(100,100,100);
 }

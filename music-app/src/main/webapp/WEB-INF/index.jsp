@@ -493,7 +493,7 @@
             <div class="hotTop">
                 <a href="">榜单</a>
                 <span>
-                <a href="">更多</a>
+                <a href="/music/rank">更多</a>
             </span>
 
 

@@ -162,7 +162,7 @@
 	                            </div>
 	                            <a href="/music/play?songId=${newHotSong.getId()}"><div class="rank-13-2">${newHotSong.getSongName() }</div></a>
 	                            <div class="rank-13-3">${newHotSong.getSongTime() }</div>
-	                            <a href="javascript:;"><div class="rank-13-4">${newHotSong.getSongAuthor() }</div></a>
+	                            <a href="https://www.baidu.com/s?wd=${newHotSong.getSongAuthor() }"><div class="rank-13-4">${newHotSong.getSongAuthor() }</div></a>
 	                        </div>
                         </c:forEach>
                        
@@ -213,7 +213,7 @@
 	                            </div>
 	                            <a href="/music/play?songId=${newSong.getId()}"><div class="rank-13-2">${newSong.getSongName() }</div></a>
 	                            <div class="rank-13-3">${newSong.getSongTime() }</div>
-	                            <a href="javascript:;"><div class="rank-13-4">${newSong.getSongAuthor() }</div></a>
+	                            <a href="https://www.baidu.com/s?wd=${newSong.getSongAuthor() }"><div class="rank-13-4">${newSong.getSongAuthor() }</div></a>
 	                        </div>
                         </c:forEach>
                        
@@ -264,7 +264,7 @@
 	                            </div>
 	                            <a href="/music/play?songId=${originalSong.getId()}"><div class="rank-13-2">${originalSong.getSongName() }</div></a>
 	                            <div class="rank-13-3">${originalSong.getSongTime() }</div>
-	                            <a href="javascript:;"><div class="rank-13-4">${originalSong.getSongAuthor() }</div></a>
+	                            <a href="https://www.baidu.com/s?wd=${originalSong.getSongAuthor() }"><div class="rank-13-4">${originalSong.getSongAuthor() }</div></a>
 	                        </div>
                         </c:forEach>
                        
@@ -315,7 +315,7 @@
 	                            </div>
 	                            <a href="/music/play?songId=${hotSong.getId()}"><div class="rank-13-2">${hotSong.getSongName() }</div></a>
 	                            <div class="rank-13-3">${hotSong.getSongTime() }</div>
-	                            <a href="javascript:;"><div class="rank-13-4">${hotSong.getSongAuthor() }</div></a>
+	                            <a href="https://www.baidu.com/s?wd=${hotSong.getSongAuthor() }"><div class="rank-13-4">${hotSong.getSongAuthor() }</div></a>
 	                        </div>
                         </c:forEach>
                        

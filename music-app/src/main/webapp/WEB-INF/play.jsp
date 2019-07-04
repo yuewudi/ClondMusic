@@ -85,7 +85,6 @@
 
 
 
-
 <div class="play-box">
     <div class="my-music-song">
         <div class="my-music-list-music ll-music">
@@ -96,7 +95,7 @@
                 </div>
                 <div class="mymusic-title-text">${song.getSongName() }</div>
                 <div class="mymusic-title-username">歌手:
-                    <a href="javascript:;">${song.getSongAuthor() }</a>
+                    <a href="https://www.baidu.com/s?wd=${song.getSongAuthor() }">${song.getSongAuthor() }</a>
                 </div>
                 <div class="mymusic-btns">
                     <div class="mymusic-btns1">
@@ -122,6 +121,7 @@
                 
                
             </div>
+            
              <div class="play-music">
                 <audio controls="controls" autoplay="autoplay" preload="auto">
                     <source src="${song.getSongUrl()}" type="audio/ogg">

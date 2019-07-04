@@ -162,7 +162,7 @@
                         </div>
                         <a href="/music/play?songId=${song.getId() }"><div class="mymusic-li-3">${song.getSongName() }</div></a>
                         <div class="mymusic-li-4">${song.getSongTime() }</div>
-                        <a href=""><div class="mymusic-li-5">${song.getSongAuthor() }</div></a>
+                        <a href="https://www.baidu.com/s?wd=${song.getSongAuthor() }"><div class="mymusic-li-5">${song.getSongAuthor() }</div></a>
                         <a href=""><div class="mymusic-li-6">${song.getDescription() }</div></a>
                     </li>
                 

@@ -84,6 +84,7 @@ public class PlayController {
 		mv.addObject("scDTOs",scDTOs);
 		
 		mv.addObject("song",song);
+		
 		mv.setViewName("play");
 		return mv;
 	}
