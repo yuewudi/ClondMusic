@@ -11,7 +11,10 @@ public interface ISongService {
 
 	// 根据id查歌曲
 	Song searchSong(int id);
-
+	
+	//根据上传者查找歌曲
+	List<Song> searchByUploaderId(int uploaderId);
+		
 	// 根据关键字查找歌曲
 	List<Song> searchLikeSong(String key);
 
@@ -25,6 +28,13 @@ public interface ISongService {
 	List<Song> findByTypeId(int typeId);
 	
 	//查询所有歌曲
-	List<Song> findAll();
+	List<Song> findAllSongs();
+	
+	//查询歌曲个数
+	int count();
+	
+	//查询新歌
+	List<Song> newSong();
+	
 
 }

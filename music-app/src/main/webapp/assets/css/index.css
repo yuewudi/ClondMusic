@@ -243,7 +243,7 @@ td a:hover{
     height: 33px;
     padding: 0px 10px 0px 34px;
     background: url("../images/index.png") no-repeat -225px -156px;
-    border-bottom: 2px solid rgb(193, 13, 12);
+    border-bottom: 2px solid rgb(100,100,193);
 }
 .hotTop a{
     float: left;

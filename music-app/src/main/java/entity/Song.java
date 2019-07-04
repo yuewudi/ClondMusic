@@ -13,6 +13,7 @@ private String songImage;
 private String songWords;
 private String description;
 private Date song_create_time;
+private int uploaderId;
 private boolean isVip;
 private boolean status;
 
@@ -23,9 +24,8 @@ public Song() {
 }
 
 
-
 public Song(int id, String songName, String songAuthor, int typeId, String songTime, String songUrl, String songImage,
-		String songWords, String description, Date song_create_time, boolean isVip, boolean status) {
+		String songWords, String description, Date song_create_time, int uploaderId, boolean isVip, boolean status) {
 	super();
 	this.id = id;
 	this.songName = songName;
@@ -37,16 +37,25 @@ public Song(int id, String songName, String songAuthor, int typeId, String songT
 	this.songWords = songWords;
 	this.description = description;
 	this.song_create_time = song_create_time;
+	this.uploaderId = uploaderId;
 	this.isVip = isVip;
 	this.status = status;
 }
-
-
 
 //getset方法
 public int getId() {
 	return id;
 }
+public int getUploaderId() {
+	return uploaderId;
+}
+
+
+public void setUploaderId(int uploaderId) {
+	this.uploaderId = uploaderId;
+}
+
+
 public void setId(int id) {
 	this.id = id;
 }
@@ -123,14 +132,16 @@ public void setStatus(boolean status) {
 
 @Override
 public String toString() {
-	return "Song [id=" + id + ", songName=" + songName + ", songAuthor=" + songAuthor + ", typeId=" + typeId + ", songTime="
-			+ songTime + ", songUrl=" + songUrl + ", songImage=" + songImage + ", songWords=" + songWords
-			+ ", description=" + description + ", song_create_time=" + song_create_time + ", isVip=" + isVip
-			+ ", status=" + status + "]";
+	return "Song [id=" + id + ", songName=" + songName + ", songAuthor=" + songAuthor + ", typeId=" + typeId
+			+ ", songTime=" + songTime + ", songUrl=" + songUrl + ", songImage=" + songImage + ", songWords="
+			+ songWords + ", description=" + description + ", song_create_time=" + song_create_time + ", uploaderId="
+			+ uploaderId + ", isVip=" + isVip + ", status=" + status + "]";
 }
 
 
 
+
+//hashCode方法
 @Override
 public int hashCode() {
 	final int prime = 31;
@@ -147,9 +158,9 @@ public int hashCode() {
 	result = prime * result + ((song_create_time == null) ? 0 : song_create_time.hashCode());
 	result = prime * result + (status ? 1231 : 1237);
 	result = prime * result + typeId;
+	result = prime * result + uploaderId;
 	return result;
 }
-
 
 
 @Override
@@ -209,11 +220,12 @@ public boolean equals(Object obj) {
 		return false;
 	if (typeId != other.typeId)
 		return false;
+	if (uploaderId != other.uploaderId)
+		return false;
 	return true;
 }
 
 
-//hashCode方法
 
 
 }

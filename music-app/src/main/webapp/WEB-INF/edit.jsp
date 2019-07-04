@@ -11,42 +11,9 @@
 <link rel="stylesheet" href="assets/css/foot.css">
 <link rel="stylesheet" href="assets/css/header.css">
 <script src="assets/js/jquery.js"></script>
-<script type="text/javascript">
-	//保存方法
-	$(function () {
-            $(".submit").click(function (){
-                var nickName = $("input[name = 'nickName']").val();
-                var description = $("textarea[name='description']").val();
-                var sex = $("input[name = 'sex']:checked").val();
-
-                $.ajax({
-                	type:"POST",
-                    url:"/music/save",
-                    data:{
-                        nickName : nickName,
-                        description : description,
-                        sex : sex,
-                    },
-                    dataType:"json",
-                    success:function(data) {
-                        var ad  = eval(data);
-                        console(ad)
-                        alert(ad);
-                    }
-                });
-
-            })
-
-        })
-
-	
-</script>
-
-
-</head>
-<body>
-	<!-- 导航栏 -->
-<script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script>
         $(function () {
             $('.uh').hover(function () {
                 $('.pull').css("display","block")
@@ -65,8 +32,36 @@
 
 
     </script>
+<script type="text/javascript">
+	//保存方法
+	function submit() {
+		var nickName = $("input[name = 'nickName']").val();
+		var description = $("textarea[name='description']").val();
+		var sex = $("input[name = 'sex']:checked").val();
+		$.ajax({
+			type : "POST",
+			url : "/music/save",
+			async:true,
+			cache : false,
+			
+			data : {
+				nickName : nickName,
+				description : description,
+				sex : sex,
+			},
+			success : function(data) {
+			        $(".data").html("保存成功")
+			    }
+		});
 
-<header>
+	}
+
+</script>
+
+
+</head>
+<body>
+	<header>
     <div class="top">
         <div class="left">
             <div class="logo"><a href=""></a></div>
@@ -74,11 +69,11 @@
                 <div><a href="/music/index">发现音乐</a></div>
                 <div><a href="/music/myMusic?userid=${user.getId() }">我的音乐</a></div>
                 <div><a href="/music/MV">发现视频</a></div>
-                <div><a href="">热门排行榜</a></div>
+                <div><a href="/music/rank">热门排行榜</a></div>
             </div>
         </div>
         <div class="right">
-            <div class="seek">音乐/视频/用户</div>
+            <a href="/music/search" class="seek" >音乐/视频/用户</a>
             <div class="loginButton" style="display:${none}">
                 <a href="javascript:;">用户登陆</a>           
             </div>
@@ -110,35 +105,36 @@
 
 </header>
 
-
-
-
-
 	<div class="edit-box">
 		<div class="edit-title">个人设置</div>
 		<hr style="height: 1px; border: none; border-top: 1px dashed #d5d5d5;"
 			width="95%" />
 		<div class="edit-area">
-			<div class="head-img" style="background: url(${user.getHeader()}) center center /100% auto">
+			<div class="head-img"
+				style="background: url(${user.getHeader()}) no-repeat center center /100% auto;	background-size:140px 140px;">
 				<div class="replace">
-					<a href="">更换头像</a>
+					<a href="uploadImage">更换头像</a>
 				</div>
 			</div>
 			<p>
-				昵称：<input type="text" name="nickName"
+				昵称：<input type="text" name="nickName" value="${user.getNickName()}"
 					style="height: 20px; width: 200px">
 			</p>
 			<p>
-				<span style="vertical-align: top;">介绍：</span>
-				<textarea name="description"
-					style="width: 80px; height: 80px; width: 200px; resize: none;"></textarea>
+				<span style="vertical-align: top;">介绍：</span><textarea name="description"
+					style="width: 80px; height: 80px; width: 200px; resize: none;">${user.getDescription()}</textarea>
 			</p>
 			<p>
-				性别：<input type="radio" value="true" name="sex">男
-					<input type="radio" value="false" name="sex">女
+				性别：<input type="radio" value="true" name="sex"
+					<c:if test="${user.isSex() == true  }">
+				checked</c:if>>男
+				<input type="radio" value="false" name="sex"
+					<c:if test="${user.isSex() == false  }">
+				checked</c:if>>女
 			</p>
 			<p>
-				<input type="button" value="保存" class="submit">
+				<input type="button" value="保存" class="submit"
+					onclick="return submit()"><span class="data"></span>
 			</p>
 
 
@@ -155,7 +151,7 @@
 			</c:if>
 			<c:if test="${user.getPhone() != 0  }">
 				<p>
-					你已绑定手机号：${user.getPhone() }&nbsp;<a href="unbind.html"
+					你已绑定手机号：${user.getPhone() }&nbsp;<a href="/music/bind"
 						style="color: red">换绑</a>
 				</p>
 			</c:if>

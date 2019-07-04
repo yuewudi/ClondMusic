@@ -2,6 +2,8 @@ package config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
@@ -31,4 +33,14 @@ public class WebConfig extends WebMvcConfigurationSupport{
 		registry.addResourceHandler("/assets/**").addResourceLocations("/assets/");
 		super.addResourceHandlers(registry);
 	}
+	 //配置multipart解析器
+    //具体参数的配置在AbstractAnnotationConfigDispatcherServletInitializer的方法
+    //customizeRegistration(Dynamic registration)方法或web.xml中设置
+	@Bean
+	public MultipartResolver multipartResolver(){
+		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver();
+		multipartResolver.setMaxUploadSize(100*1024*1024);
+		return multipartResolver;
+	}
+  
 }

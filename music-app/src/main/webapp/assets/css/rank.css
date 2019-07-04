@@ -26,14 +26,14 @@ h1,h2,h3,h4,h5,h6,ul,li{
 }
 .rank-two{
     width:738px;
-    height:100%;
+    height:auto;
     box-sizing:border-box;
     float:right;
     border:1px solid rgba(0,0,0,0.2);
 }
 .rank-three{
     width:738px;
-    height:100%;
+    height:auto;
     box-sizing:border-box;
     float:right;
     margin-left:241px;
@@ -43,7 +43,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
 }
 .rank-four{
     width:738px;
-    height:100%;
+    height:auto;
     box-sizing:border-box;
     float:right;
     margin-left:241px;
@@ -53,7 +53,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
 }
 .rank-five{
     width:738px;
-    height:100%;
+    height:auto;
     box-sizing:border-box;
     float:right;
     margin-left:241px;
@@ -61,46 +61,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
     display:none;
     border:1px solid rgba(0,0,0,0.2);
 }
-.rank-six{
-    width:738px;
-    height:100%;
-    box-sizing:border-box;
-    float:right;
-    margin-left:241px;
-    position:absolute;
-    display:none;
-    border:1px solid rgba(0,0,0,0.2);
-}
-.rank-seven{
-    width:738px;
-    height:100%;
-    box-sizing:border-box;
-    float:right;
-    margin-left:241px;
-    position:absolute;
-    display:none;
-    border:1px solid rgba(0,0,0,0.2);
-}
-.rank-eight{
-    width:738px;
-    height:100%;
-    box-sizing:border-box;
-    float:right;
-    margin-left:241px;
-    position:absolute;
-    display:none;
-    border:1px solid rgba(0,0,0,0.2);
-}
-.rank-nine{
-    width:738px;
-    height:100%;
-    box-sizing:border-box;
-    float:right;
-    margin-left:241px;
-    position:absolute;
-    display:none;
-    border:1px solid rgba(0,0,0,0.2);
-}
+
 .rank-feature{
     width:100%;
     height:27px;
@@ -200,7 +161,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
     left:190px;top:40px;
 }
 .rank-title-create{
-    width:100px;
+    width:120px;
     height:15px;
     font-size:10px;
     color:#666;
@@ -213,7 +174,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
     font-size:10px;
     color:#999;
     position:absolute;
-    left:295px;top:75px;
+    left:315px;top:75px;
 }
 .rank-title-img1{
     width:60px;height:25px;
@@ -276,7 +237,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
 .rank-11{
     width:100%;
     height:30px;
-    border-bottom:2px solid #C20C0C;
+    border-bottom:2px solid rgb(100,100,193);
 }
 .rank-12{
     width:100%;
@@ -396,7 +357,7 @@ h1,h2,h3,h4,h5,h6,ul,li{
     float:left;
 }
 .rank-13-4{
-    width:60px;
+    width: 120px;
     height:15px;
     margin-top:5px;
     margin-left:60px;

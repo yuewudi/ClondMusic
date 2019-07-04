@@ -9,6 +9,27 @@
     <link rel="stylesheet" href="assets/css/foot.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <script src="./assets/js/jquery.js"></script>
+        <script src="assets/js/index.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script>
+        $(function () {
+            $('.uh').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+                }
+            )
+
+
+            $('.pull').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+            })
+        })
+
+
+    </script>
 </head>
 <body>
 <!-- 导航栏 -->
@@ -17,21 +38,42 @@
         <div class="left">
             <div class="logo"><a href=""></a></div>
             <div class="option">
-                <div><a href="">发现音乐</a></div>
-                <div><a href="">我的音乐</a></div>
-                <div><a href="">朋友</a></div>
-                <div><a href="">歌单</a></div>
-                <div><a href="">排行榜</a></div>
+                <div><a href="/music/index">发现音乐</a></div>
+                <div><a href="/music/myMusic?userid=${user.getId() }">我的音乐</a></div>
+                <div><a href="/music/MV">发现视频</a></div>
+                <div><a href="/music/rank">热门排行榜</a></div>
             </div>
         </div>
         <div class="right">
-            <div class="seek">音乐/视频/用户</div>
+            <a href="/music/search" class="seek" >音乐/视频/用户</a>
             <div class="loginButton" style="display:${none}">
                 <a href="javascript:;">用户登陆</a>           
             </div>
-              <div class="userHeader" style="display:${block};background: url('${user.getHeader()}') no-repeat ;background-size: 60px 60px">
+           <div class="uh" style="display:${block}">
+
+               <a style="color:none"><img class="userHeader"  src="${user.getHeader()}"></img></a>
+            </div>
+            	
+
+    	</div>
+    	
+    	<div class="pull">
+            <div class="loginOut" >
+                <a  href="/music/myHome">我的主页</a>
+            </div>
+
+            <div class="loginOut" >
+                <a href="/music/vip">VIP会员</a>
+            </div>
+            <div class="loginOut" >
+                <a href="/music/edit">个人设置</a>
+            </div>
+            <div class="loginOut" >
+                <a href="/music/loginOut">退出</a>
+            </div>
         </div>
-    </div>
+    	
+	</div>
 
 </header>
 <div class="bind-box">

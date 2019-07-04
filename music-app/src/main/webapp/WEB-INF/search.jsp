@@ -11,6 +11,27 @@
 <script src="assets/js/jquery.js"></script>
 <link rel="stylesheet" href="assets/css/header.css">
 <link rel="stylesheet" href="assets/css/foot.css">
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/validate.js"></script>
+    <script>
+        $(function () {
+            $('.uh').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+                }
+            )
+
+
+            $('.pull').hover(function () {
+                $('.pull').css("display","block")
+            },function () {
+                $('.pull').css("display","none")
+            })
+        })
+
+
+    </script>
 <script type="text/javascript">
 	$(function() {
 		$(".searchSong").click(function() {
