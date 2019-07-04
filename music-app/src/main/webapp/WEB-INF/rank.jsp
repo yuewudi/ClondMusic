@@ -8,6 +8,8 @@
     <title>排行榜</title>
     <link rel="stylesheet" href="./assets/css/rank.css">
     <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="assets/css/foot.css">
     <script src="assets/js/jquery.js"></script>
         <script src="assets/js/index.js"></script>
     <script src="assets/js/validate.js"></script>
@@ -78,6 +80,66 @@
 	</div>
 
 </header>
+<!--登陆-->
+
+<div class="login" style="display:${display}">
+    <div class="login-top">登陆
+    <div class="close">×</div>
+    </div>
+    <div class="login-top sign" style="display: none;">注册
+    <div class="close">×</div>
+    </div>
+
+    <div class="login-bottom">
+        <form action="/music/login" method="post">
+            <table style="display: ${login}" style align="center"  >
+                <tr>
+                    <td>账号：</td>
+                    <td class="hint"><input type="text" value="请输入账号" name="userNumber" class="text">
+                    <span style="float:left;color: red">${erro}</span></td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td class="hint" align="top"> <input type="password" value="" name="password">
+                     <span style="float:left;color: red">${nopass}</span></td>
+                </tr>
+                <tr>
+                    <td style="font-size: 10px">记住账号密码 <input type="checkbox"></td>
+                    <td style="font-size: 10px;float: right;"><a href="">忘记密码？</a></td>
+                </tr>
+                <tr>
+
+                    <td colspan="2" align="center">
+                        <input type="button" value="注册" class="button">
+                        <input type="submit" value="登陆" class="button">
+                    </td>
+                </tr>
+            </table>
+            <table style="display: ${sign}"  class="signPage" align="center" >
+                <tr>
+                    <td>账号：</td>
+                    <td class="hint"><input type="text" value="请输入账号" name="account" class="text">
+                    <span style="color:red">${already}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td class="hint"><input type="password"  name="pwd" id="pd"></td>
+                </tr>
+                <tr>
+                    <td>确认密码：</td>
+                    <td class="hint"><input type="password"name="pwd2" ></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="注&nbsp&nbsp册" class="button signButton">
+                    </td>
+                </tr>
+            </table>
+
+        </form>
+    </div>
+</div>
 
 <!--排行榜-->
 <div class="rank-box">
@@ -344,10 +406,20 @@
         })
     })
 </script>
-<script>
-    	
-    	
-    	
-    </script>
+<div class="zuihou">
+		<div class="zuihou1">
+			<div class="zuihou11"></div>
+			<a href="">关于网易</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="">客户服务</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="">服务条款</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="">隐私政策</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a href="">版权投诉指引</a>&nbsp;&nbsp;|&nbsp;&nbsp; <a href="">意见反馈</a>&nbsp;&nbsp;|
+			<div class="zuihou12">
+				UBDF1812版权所有2019-2099&nbsp;&nbsp;山西优逸客有限公司运营：晋网文[2019]7418-741号违法和不良信息举报电话：0351-8300110
+				举报邮箱：1442286843@qq.com 不服来206教室单挑</div>
+			<div class="zuihou13"></div>
+			<div class="zuihou13"></div>
+			<div class="zuihou13"></div>
+			<div class="zuihou13"></div>
+		</div>
+	</div>
 </body>
 </html>
