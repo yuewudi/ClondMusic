@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -36,8 +37,6 @@
                 $('.pull').css("display","none")
             })
         })
-
-
     </script>
 
 <header>
@@ -90,10 +89,13 @@
         <img alt="" class="head" src="${user.getHeader()}">
         <div class="message">
             <div class="message-title">
-                <span class="nickname">${user.getNickName()}</span><span class="vip-icon">vip</span>
-
+                <span class="nickname">${user.getNickName()}</span>
+                <c:if test="${vipStatus == 0 }"><span class="vip-icon">vip</span></c:if>
+				<c:if test="${vipStatus!= 0  }"><span class="vip-icon" style="color:red">vip</span></c:if>
                 <div class="vip-enable">
-                    当前未开通
+                				<c:if test="${vipStatus == 0 }">当前未开通</c:if>
+						<c:if test="${vipStatus!= 0  }">${endTime}到期,您可以续费</c:if>
+                
                 </div>
 
             </div>
@@ -103,19 +105,7 @@
 
         <div class="types">
             <div class="type active">
-                <p class="line-one">
-                    <span class="price">4.8</span>
-                    <span>元每月</span>
-                    <span class="old">11元</span>
-                </p>
-                <p class="desc">特惠仅限本月</p>
-
-
-                <hr style="height:1px;border:none;border-top:1px dashed #d5d5d5;" width="80%"/>
-                <p class="month">连续包月</p>
-            </div>
-            <div class="type">
-                <p class="line-one">
+    <p class="line-one">
                     <span class="price">15</span>
                     <span>元</span>
                 </p>
@@ -126,13 +116,22 @@
                 <p class="month">1个月</p>
             </div>
             <div class="type">
-                <p class="line-one">
+                  <p class="line-one">
                     <span class="price">40</span>
                     <span>元</span>
                 </p>
                 <p class="desc">13.33元/月</p>
                 <hr style="height:1px;border:none;border-top:1px dashed #d5d5d5;" width="80%"/>
                 <p class="month">3个月</p>
+            </div>
+            <div class="type">
+                <p class="line-one">
+                    <span class="price">75</span>
+                    <span>元</span>
+                </p>
+                <p class="desc">12.5元/月</p>
+                <hr style="height:1px;border:none;border-top:1px dashed #d5d5d5;" width="80%"/>
+                <p class="month">6个月</p>
             </div>
             <div class="type">
                 <p class="line-one">
@@ -149,50 +148,77 @@
             <p class="pay-title">支付方式</p>
         <div class="pay-box">
             <div class="pay">
-                <img class="pay-ma" src="assets/images/ma1.png" alt="">
+                <form name=vip1pay action="/music/gopay" method=post target="_blank">
                 <div class="pay-desc">
-                    <p>使用微信、支付宝扫码支付</p>
+                    <p>支持使用支付宝支付,您需要支付：</p>
                     <div class="pay-icon">
-                        <img alt="微信支付" src="assets/images/wx.png" width="18px">
                         <img alt="支付宝支付" src="assets/images/zfb.png" width="18px">
                     </div>
-                    <span class="pay-price">4.8</span>
-                    <span>元</span>
-                    <span>(已省<span style="color: red">6.2元</span>)</span>
+                    <span class="pay-price">15</span>
+                    <span>元</span> 
                 </div>
+                  <input type="hidden" name="userId" value="${user.getId() }">
+               <input type="hidden" name="amount" value="15">
+               <input type="hidden" name="subject" value="优逸云音乐会员1个月">
+               <input type="hidden" name="body" value="30天内可以畅听全站歌曲">
+                <input type="submit" value="去支付" class="pay-button">
+            </form>
             </div>
         <div class="pay">
-            <img class="pay-ma" src="assets/images/ma2.png" alt="">            <div class="pay-desc">
-                <p>使用微信、支付宝扫码支付</p>
+                        <form name=vip3pay action="/music/gopay" method=post target="_blank">
+					<div class="pay-desc">
+		        <p>支持使用支付宝支付,您需要支付：</p>
+						<div class="pay-icon">
+							<img src="assets/images/zfb.png" alt="支付宝支付" width="18px">
+						</div>
+						<span class="pay-price">40</span> <span>元</span> <span>(已省<span
+							style="color: red">5元</span>)
+						</span>
+					</div>
+					 <input type="hidden" name="userId" value="${user.getId() }">
+				<input type="hidden" name="amount" value="40">
+               <input type="hidden" name="subject" value="优逸云音乐会员3个月">
+               <input type="hidden" name="body" value="90天内可以畅听全站歌曲">
+                <input type="submit" value="去支付" class="pay-button">
+                </form>
+		</div>
+        <div class="pay">
+                        <form name=vip6pay action="/music/gopay" method=post target="_blank">
+		<div class="pay-desc">
+         <p>支持使用支付宝支付,您需要支付：</p>
                 <div class="pay-icon">
-                    <img src="assets/images/wx.png" alt="微信支付" width="18px">
+
                     <img src="assets/images/zfb.png" alt="支付宝支付" width="18px">
                 </div>
-                <span class="pay-price">15</span>
+                <span class="pay-price">75</span>
                 <span>元</span>
+                 <span>(已省<span style="color: red">15元</span>)</span>
             </div>
+             <input type="hidden" name="userId" value="${user.getId() }">
+            <input type="hidden" name="amount" value="75">
+               <input type="hidden" name="subject" value="优逸云音乐会员6个月">
+               <input type="hidden" name="body" value="180天内可以畅听全站歌曲">
+                <input type="submit" value="去支付" class="pay-button">
+                </form>
         </div>
         <div class="pay">
-            <img class="pay-ma" src="assets/images/ma3.png" alt="">            <div class="pay-desc">
-                <p>使用微信、支付宝扫码支付</p>
+                        <form name=vip12pay action="/music/gopay" method=post target="_blank">
+<div class="pay-desc">
+        <p>支持使用支付宝支付,您需要支付：</p>
                 <div class="pay-icon">
-                    <img src="assets/images/wx.png" alt="微信支付" width="18px">
-                    <img src="assets/images/zfb.png" alt="支付宝支付" width="18px">
-                </div>
-                <span class="pay-price">40</span>
-                <span>元</span>
-            </div>
-        </div>
-        <div class="pay">
-            <img class="pay-ma" src="assets/images/ma4.png" alt="">            <div class="pay-desc">
-                <p>使用微信、支付宝扫码支付</p>
-                <div class="pay-icon">
-                    <img src="assets/images/wx.png" alt="微信支付" width="18px">
+          
                     <img src="assets/images/zfb.png" alt="支付宝支付" width="18px">
                 </div>
                 <span class="pay-price">138</span>
                 <span>元</span>
+                 <span>(已省<span style="color: red">42元</span>)</span>
         </div>
+         <input type="hidden" name="userId" value="${user.getId() }">
+<input type="hidden" name="amount" value="138">
+               <input type="hidden" name="subject" value="优逸云音乐会员12个月">
+               <input type="hidden" name="body" value="360天内可以畅听全站歌曲">
+                <input type="submit" value="去支付" class="pay-button">
+                </form>
         </div>
     </div>
     <div class="vip-img"></div>

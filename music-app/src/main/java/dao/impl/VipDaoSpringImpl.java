@@ -24,7 +24,7 @@ public class VipDaoSpringImpl implements IVipDao {
 	// --添加vip
 	@Override
 	public void addVip(Vip vip) {
-		jt.update("insert into t_song_vip(user_id,status,start_time,end_time) " + "values(?,?,?,?)", vip.getUserId(), 1,
+		jt.update("insert into t_vip(user_id,status,start_time,end_time) " + "values(?,?,?,?)", vip.getUserId(), 1,
 				DateUtil.formate(new Date(), "yyyy-MM-dd HH:mm:ss"),
 				DateUtil.formate(vip.getEnd_time(), "yyyy-MM-dd HH:mm:ss"));
 	}
@@ -59,7 +59,7 @@ public class VipDaoSpringImpl implements IVipDao {
 	// --根据userId查找vip
 	@Override
 	public List<Vip> findByUserId(int userId) {
-		return jt.query("select * from t_vip where userId=?", 
+		return jt.query("select * from t_vip where user_id=?", 
 				new Object[] {userId},
 				new BeanPropertyRowMapper<Vip>(Vip.class));
 	}
@@ -67,7 +67,7 @@ public class VipDaoSpringImpl implements IVipDao {
 	// --根据userId查找某种状态的所有vip
 	@Override
 	public List<Vip> findByUserIdAndStatus(int userId, boolean status) {
-		return jt.query("select * from t_vip where userId=? and status=?", 
+		return jt.query("select * from t_vip where user_id=? and status=?", 
 				new Object[] {userId,status},
 				new BeanPropertyRowMapper<Vip>(Vip.class));
 	}
@@ -75,7 +75,7 @@ public class VipDaoSpringImpl implements IVipDao {
 	// --更新vip状态
 	@Override
 	public void updateVip(Vip vip) {
-		jt.update("update t_vip set status=? where id=?", new Object[] { vip.isStatus(), vip.getId() });
+		jt.update("update t_vip set status=?,end_time=? where id=?", new Object[] { vip.isStatus(), vip.getEnd_time(),vip.getId() });
 	}
 
 }
