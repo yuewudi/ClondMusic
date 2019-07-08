@@ -27,10 +27,10 @@ public class AlipayConfig {
     public static String alipay_public_key = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgOvjOHq+I7+Ax/tJ0bwjxSSqWT5cZJ/Bq+KSPhi3lJ0NH4cvzywZ/Cb+zr2JT5JCUXo/C25+J0g+ykcV6LrAI0SXhwswJpD3Qu9BDPiQ4X2ey1Twmv5FuLO+YWnlrEST8/8yYXjXTZ1EOoJwk6XQglTTA0ve20Hcc31u8k9CpkxMEeVqWFBMx/ql0xZFyjd4RPJBF+8GP4n9LoyP0M7g+xvcYlVmsQZ7YBwYNdNaZpNgJtVCXZ1KGVPma/U5K8uFixvpJersfryZxF7ldJlR3XBTd2D8KtPBBuUD60lf1aTfu9FfSk2DT0h09uOSS9qTgSCKYFoeB1Wn7HLNfhDAtQIDAQAB";
 
 	// 服务器异步通知页面路径  需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-	public static String notify_url = "http://www.liuyu61.com/music/notify";
+	public static String notify_url = "http://liuyu.frpgz1.idcfengye.com/music/notify";
 
 	// 页面跳转同步通知页面路径 需http://格式的完整路径，不能加?id=123这类自定义参数，必须外网可以正常访问
-	public static String return_url = "http://www.liuyu61.com/music/return";
+	public static String return_url = "http://liuyu.frpgz1.idcfengye.com/music/return";
 
 	// 签名方式
 	public static String sign_type = "RSA2";

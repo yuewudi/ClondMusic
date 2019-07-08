@@ -6,6 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>排行榜</title>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/rank.css">
     <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="assets/css/login.css">

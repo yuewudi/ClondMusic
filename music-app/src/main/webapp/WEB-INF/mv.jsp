@@ -8,7 +8,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="assets/css/friend.css">
  	<link rel="stylesheet" href="assets/css/header.css">
-
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <script type="text/javascript" src="assets/js/jquery.js"></script>
         <script src="assets/js/index.js"></script>
     <script src="assets/js/validate.js"></script>

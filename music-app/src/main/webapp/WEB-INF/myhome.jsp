@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>我的主页</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="assets/css/myhome.css">
 <link rel="stylesheet" href="assets/css/foot.css">
 <link rel="stylesheet" href="assets/css/header.css">

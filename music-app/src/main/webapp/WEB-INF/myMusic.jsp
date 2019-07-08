@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>我的音乐</title>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/mymusic.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <script src="assets/js/jquery.js"></script>

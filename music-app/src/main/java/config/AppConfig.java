@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Import;
  *
  */
 @Configuration
-@ComponentScan({"dao","service","controller"})
+@ComponentScan({"dao","service","controller","task"})
 @Import({JdbcConfig.class,WebConfig.class})
 public class AppConfig {
 	
