@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>优逸云音乐</title>
-    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon" />
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/foot.css">
