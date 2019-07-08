@@ -221,11 +221,11 @@
                             <li>
                                 <div class="li-div">
                                     <img src="${newSong10.getSongImage()}" alt="" width="104px" height="100px">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
+                                    <a href="/music/play?songId=${newSong10.getId()}" class="li-a-one"></a>
+                                    <a href="/music/play?songId=${newSong10.getId()}" class="li-a-two"></a>
                                 </div>
-                                <p><a href="">${newSong10.getSongName()}</a></p>
-                                <p><a href="">${newSong10.getSongAuthor()}</a></p>
+                                <p><a href="/music/play?songId=${newSong10.getId()}">${newSong10.getSongName()}</a></p>
+                                <p><a href="https://www.baidu.com/s?wd=${newSong10.getSongAuthor()}">${newSong10.getSongAuthor()}</a></p>
                             </li>
                             </c:forEach>
                         </ul>
