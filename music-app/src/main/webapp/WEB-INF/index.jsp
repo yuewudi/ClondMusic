@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>优逸云音乐</title>
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/image/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/index.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/foot.css">
@@ -186,102 +186,21 @@
 
             </div>
             <div class="hotBottom">
+            	<c:forEach items="${newHotSongs8}" var="newHotSong8" varStatus="id">
                 <li>
                     <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
+                        <a href="/music/play?songId=${newHotSong8.getId()}"><img src="${newHotSong8.getSongImage()}" alt="" width="140px"></a>
+                        <a href="/music/play?songId=${newHotSong8.getId()}" class="liTopa"></a>
                         <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
+                            <a href="/music/play?songId=${newHotSong8.getId()}" class="liTopBottoma"></a>
                             <span class="listen"></span>
-                            <span class="playNum">5500万</span>
+                            <span class="playNum">${newHotSong8.getCount()}</span>
                         </div>
                     </div>
-                    <p>华语速爆新歌</p>
+                    <p> <a href="/music/play?songId=${newHotSong8.getId()}">${newHotSong8.getSongName()}</a></p>
                 </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
-                <li>
-                    <div class="liTop">
-                        <img src="assets/images/hot1.jpg" alt="">
-                        <a href="" class="liTopa"></a>
-                        <div class="liTopBottom">
-                            <a href="" class="liTopBottoma"></a>
-                            <span class="listen"></span>
-                            <span class="playNum">5500万</span>
-                        </div>
-                    </div>
-                    <p>华语速爆新歌</p>
-                </li>
+		</c:forEach>
+             
             </div>
         </div>
         <div class="hot new">
@@ -298,192 +217,17 @@
                     <div class="inner-left" href="javascript:;"></div>
                     <div class="roll">
                         <ul class="roll-ul">
+                         	<c:forEach items="${newSongs10}" var="newSong10" varStatus="id">
                             <li>
                                 <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
+                                    <img src="${newSong10.getSongImage()}" alt="" width="104px" height="100px">
                                     <a href="" class="li-a-one"></a>
                                     <a href="" class="li-a-two"></a>
                                 </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
+                                <p><a href="">${newSong10.getSongName()}</a></p>
+                                <p><a href="">${newSong10.getSongAuthor()}</a></p>
                             </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                        </ul>
-                        <ul class="roll-ul">
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                        </ul>
-                        <ul class="roll-ul">
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                        </ul>
-                        <ul class="roll-ul">
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new2.jpg" alt="">
-                                    <a href=""></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">A Brand New Day (BTS WORLD OST Part.2) </a></p>
-                                <p><a href="">BTS (防弹少年团)</a></p>
-                            </li>
-                            <li>
-                                <div class="li-div">
-                                    <img src="assets/images/new1.jpg" alt="">
-                                    <a href="" class="li-a-one"></a>
-                                    <a href="" class="li-a-two"></a>
-                                </div>
-                                <p><a href="">那就这样吧</a></p>
-                                <p><a href="">蔡程昱</a></p>
-                            </li>
+                            </c:forEach>
                         </ul>
                     </div>
                     <div class="inner-right" href="javascript:;"></div>
@@ -512,47 +256,13 @@
                         </div>
                     </div>
                     <div class="soaring-bottom">
+                       	<c:forEach items="${newHotSongs10}" var="newHotSong10" varStatus="id">
                         <li >
-                            <span class="one">1</span>
-                            <a href="">你走以后</a>
+                         <c:if test="${id.count<=3}"><span  class="one">${id.count}</span></c:if>
+                             <c:if test="${id.count>3}"><span  >${id.count}</span></c:if>
+                            <a href="/music/play?songId=${newHotSong10.getId()}">${newHotSong10.getSongName()}</a>
                         </li>
-                        <li >
-                            <span class="one">2</span>
-                            <a href="">生活该有的样子</a>
-                        </li>
-                        <li >
-                            <span class="one">3</span>
-                            <a href="">没一杯茶</a>
-                        </li>
-                        <li>
-                            <span>4</span>
-                            <a href="">Why You So Beautiful</a>
-                        </li>
-                        <li>
-                            <span>5</span>
-                            <a href="">形容</a>
-                        </li>
-                        <li>
-                            <span>6</span>
-                            <a href="">i`m with you</a>
-                        </li>
-                        <li>
-                            <span>7</span>
-                            <a href="">多在乎平庸的生活拥抱你</a>
-                        </li>
-                        <li>
-                            <span>8</span>
-                            <a href="">Summerdfsdfsdfsdfsdfsdfsd</a>
-                        </li>
-                        <li>
-                            <span>9</span>
-                            <a href="">晚安</a>
-                        </li>
-                        <li>
-                            <span>10</span>
-                            <a href="">祝你爱我到天荒地老</a>
-                        </li>
-
+                      </c:forEach>
                     </div>
 
                 </div>
@@ -568,47 +278,13 @@
                         </div>
                     </div>
                     <div class="soaring-bottom">
+                      	<c:forEach items="${newSongs10}" var="newSong10" varStatus="id">
                         <li >
-                            <span class="one">1</span>
-                            <a href="">你走以后</a>
+                         <c:if test="${id.count<=3}"><span  class="one">${id.count}</span></c:if>
+                             <c:if test="${id.count>3}"><span  >${id.count}</span></c:if>
+                            <a href="/music/play?songId=${newSong10.getId()}">${newSong10.getSongName()}</a>
                         </li>
-                        <li >
-                            <span class="one">2</span>
-                            <a href="">生活该有的样子</a>
-                        </li>
-                        <li >
-                            <span class="one">3</span>
-                            <a href="">没一杯茶</a>
-                        </li>
-                        <li>
-                            <span>4</span>
-                            <a href="">Why You So Beautiful</a>
-                        </li>
-                        <li>
-                            <span>5</span>
-                            <a href="">形容</a>
-                        </li>
-                        <li>
-                            <span>6</span>
-                            <a href="">i`m with you</a>
-                        </li>
-                        <li>
-                            <span>7</span>
-                            <a href="">多在乎平庸的生活拥抱你</a>
-                        </li>
-                        <li>
-                            <span>8</span>
-                            <a href="">Summerdfsdfsdfsdfsdfsdfsd</a>
-                        </li>
-                        <li>
-                            <span>9</span>
-                            <a href="">晚安</a>
-                        </li>
-                        <li>
-                            <span>10</span>
-                            <a href="">祝你爱我到天荒地老</a>
-                        </li>
-
+                      </c:forEach>
                     </div>
                 </div>
                 <div class="original soaring">
@@ -623,46 +299,13 @@
                         </div>
                     </div>
                     <div class="soaring-bottom">
+                        	<c:forEach items="${originalSongs}" var="originalSong" varStatus="id">
                         <li >
-                            <span class="one">1</span>
-                            <a href="">你走以后</a>
+                         <c:if test="${id.count<=3}"><span  class="one">${id.count}</span></c:if>
+                             <c:if test="${id.count>3}"><span  >${id.count}</span></c:if>
+                            <a href="/music/play?songId=${originalSong.getId()}">${originalSong.getSongName()}</a>
                         </li>
-                        <li >
-                            <span class="one">2</span>
-                            <a href="">生活该有的样子</a>
-                        </li>
-                        <li >
-                            <span class="one">3</span>
-                            <a href="">没一杯茶</a>
-                        </li>
-                        <li>
-                            <span>4</span>
-                            <a href="">Why You So Beautiful</a>
-                        </li>
-                        <li>
-                            <span>5</span>
-                            <a href="">形容</a>
-                        </li>
-                        <li>
-                            <span>6</span>
-                            <a href="">i`m with you</a>
-                        </li>
-                        <li>
-                            <span>7</span>
-                            <a href="">多在乎平庸的生活拥抱你</a>
-                        </li>
-                        <li>
-                            <span>8</span>
-                            <a href="">Summerdfsdfsdfsdfsdfsdfsd</a>
-                        </li>
-                        <li>
-                            <span>9</span>
-                            <a href="">晚安</a>
-                        </li>
-                        <li>
-                            <span>10</span>
-                            <a href="">祝你爱我到天荒地老</a>
-                        </li>
+                      </c:forEach>
 
                     </div>
                 </div>

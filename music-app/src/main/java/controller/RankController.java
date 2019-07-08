@@ -29,8 +29,6 @@ public class RankController {
 	@Autowired
 	private IPlayRecordService playRecordService;
 	
-	@Autowired 
-	private ISongCommentService songCommentService;
 	
 	@RequestMapping("/rank")
 	public ModelAndView rank(HttpServletRequest req, HttpServletResponse res){

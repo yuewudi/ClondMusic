@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -12,11 +13,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import entity.PlayRecordSong;
+import entity.Song;
 import entity.User;
+import service.prototype.IPlayRecordService;
+import service.prototype.ISongService;
 import service.prototype.IUserService;
 
 @Controller
 public class UserController {
+	@Autowired
+	private IPlayRecordService playRecordService;
+	@Autowired
+	private ISongService songService;
 	
 	@Autowired
 	private IUserService userService;
@@ -27,6 +36,24 @@ public class UserController {
 	public ModelAndView index(){
 		mv = new ModelAndView();
 		mv.setViewName("index");
+		List<PlayRecordSong> newHotSongs10=playRecordService.findSongAndCountInWeekLimitTen();
+		List<PlayRecordSong> newHotSongs8=new ArrayList<PlayRecordSong>();
+		for(int i=0;i<8;i++) {
+			newHotSongs8.add(newHotSongs10.get(i));
+		}
+		List<Song> originalSongs = songService.findByTypeId(6);
+
+	
+
+		List<Song> newSongs = songService.newSong();
+		List<Song> newSongs10=new ArrayList<Song>();
+		for(int i=0;i<10;i++) {
+			newSongs10.add(newSongs.get(i));
+		}
+		mv.addObject("newHotSongs8",newHotSongs8);
+		mv.addObject("newHotSongs10",newHotSongs10);
+		mv.addObject("originalSongs",originalSongs);
+		mv.addObject("newSongs10",newSongs10);
 		return mv;
 	}
 	
@@ -53,7 +80,25 @@ public class UserController {
 				mv.addObject("block",block);
 				String none = "none";
 				mv.addObject("none",none);
+				List<PlayRecordSong> newHotSongs10=playRecordService.findSongAndCountInWeekLimitTen();
+				List<PlayRecordSong> newHotSongs8=new ArrayList<PlayRecordSong>();
+				for(int i=0;i<8;i++) {
+					newHotSongs8.add(newHotSongs10.get(i));
+				}
+				List<Song> originalSongs = songService.findByTypeId(6);
+
+			
+
+				List<Song> newSongs = songService.newSong();
+				List<Song> newSongs10=new ArrayList<Song>();
+				for(int i=0;i<10;i++) {
+					newSongs10.add(newSongs.get(i));
+				}
 				mv.setViewName("index");
+				mv.addObject("newHotSongs8",newHotSongs8);
+				mv.addObject("newHotSongs10",newHotSongs10);
+				mv.addObject("originalSongs",originalSongs);
+				mv.addObject("newSongs10",newSongs10);
 				req.getSession().setMaxInactiveInterval(60*30);
 				req.getSession().setAttribute("block",block);
 				req.getSession().setAttribute("none",none);
@@ -72,6 +117,20 @@ public class UserController {
 			account = req.getParameter("account");
 			List<User> users = userService.findByAccount(account);
 			System.out.println(user);
+			List<PlayRecordSong> newHotSongs10=playRecordService.findSongAndCountInWeekLimitTen();
+			List<PlayRecordSong> newHotSongs8=new ArrayList<PlayRecordSong>();
+			for(int i=0;i<8;i++) {
+				newHotSongs8.add(newHotSongs10.get(i));
+			}
+			List<Song> originalSongs = songService.findByTypeId(6);
+
+		
+
+			List<Song> newSongs = songService.newSong();
+			List<Song> newSongs10=new ArrayList<Song>();
+			for(int i=0;i<10;i++) {
+				newSongs10.add(newSongs.get(i));
+			}
 			if(users.size()==0){
 				System.out.println(account);
 				String pwd = req.getParameter("pwd");
@@ -85,6 +144,10 @@ public class UserController {
 				userService.addUser(user);
 				mv = new ModelAndView("loginSuccess");
 				req.getSession().setAttribute("user", user);
+				mv.addObject("newHotSongs8",newHotSongs8);
+				mv.addObject("newHotSongs10",newHotSongs10);
+				mv.addObject("originalSongs",originalSongs);
+				mv.addObject("newSongs10",newSongs10);
 				return mv;
 			}else{
 				String already="用户名已存在";
@@ -96,6 +159,10 @@ public class UserController {
 				mv.addObject("login",login);	
 				mv.addObject("already", already);
 				mv.setViewName("index");
+				mv.addObject("newHotSongs8",newHotSongs8);
+				mv.addObject("newHotSongs10",newHotSongs10);
+				mv.addObject("originalSongs",originalSongs);
+				mv.addObject("newSongs10",newSongs10);
 				return mv;
 			}
 			
@@ -109,6 +176,7 @@ public class UserController {
 	
 	@RequestMapping("/loginOut")
 	public ModelAndView loginOut(HttpServletRequest req,HttpServletResponse resp){
+		
 		mv = new ModelAndView();
 		req.getSession().removeAttribute("user");
 		req.getSession().invalidate();
@@ -116,7 +184,25 @@ public class UserController {
 		mv.addObject("block",block);
 		String none = "block";
 		mv.addObject("none",none);
+		List<PlayRecordSong> newHotSongs10=playRecordService.findSongAndCountInWeekLimitTen();
+		List<PlayRecordSong> newHotSongs8=new ArrayList<PlayRecordSong>();
+		for(int i=0;i<8;i++) {
+			newHotSongs8.add(newHotSongs10.get(i));
+		}
+		List<Song> originalSongs = songService.findByTypeId(6);
+
+	
+
+		List<Song> newSongs = songService.newSong();
+		List<Song> newSongs10=new ArrayList<Song>();
+		for(int i=0;i<10;i++) {
+			newSongs10.add(newSongs.get(i));
+		}
 		mv.setViewName("index");
+		mv.addObject("newHotSongs8",newHotSongs8);
+		mv.addObject("newHotSongs10",newHotSongs10);
+		mv.addObject("originalSongs",originalSongs);
+		mv.addObject("newSongs10",newSongs10);
 		return mv;
 	}
 
