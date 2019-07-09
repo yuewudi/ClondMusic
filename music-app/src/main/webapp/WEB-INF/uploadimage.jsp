@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>上传头像</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="assets/css/bind.css">
 <link rel="stylesheet" href="assets/css/foot.css">
 <link rel="stylesheet" href="assets/css/header.css">

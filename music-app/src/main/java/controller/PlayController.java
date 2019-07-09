@@ -55,6 +55,9 @@ public class PlayController {
 		int songId = Integer.parseInt(songid);
 		Song song = songService.searchSong(songId);
 		User user = (User)req.getSession().getAttribute("user");
+		if(user==null) {
+			user=new User();
+		}
 		//添加正在播放
 		Play play = new Play();
 		play.setSongId(songId);

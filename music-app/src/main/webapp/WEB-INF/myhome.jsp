@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>我的主页</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="assets/css/myhome.css">
 <link rel="stylesheet" href="assets/css/foot.css">
 <link rel="stylesheet" href="assets/css/header.css">
@@ -103,8 +104,8 @@
 			<div class="message">
 				<div class="message-title">
 					<span class="nickname">${user.getNickName()}</span> <span
-						class="lv">Lv.${user.getGrade() }</span> <span class="sex"><c:if
-							test="${user.isSex() eq 'true' }"><span style=" color: dodgerblue">♂</span></c:if>
+						class="lv">Lv.${user.getGrade() }</span> <span class="sex">
+						<c:if test="${user.isSex() eq 'true' }"><span style=" color: dodgerblue">♂</span></c:if>
 						<c:if test="${user.isSex() eq 'false' }"><span style=" color: pink">♀</span></c:if></span> <a class="edit"
 						href="/music/edit">编辑个人资料</a>
 					<div class="hr"></div>

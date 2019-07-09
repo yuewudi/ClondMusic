@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import dao.prototype.IVipDao;
 import entity.Vip;
 import service.prototype.IVipService;
+import util.DateUtil;
 
 /**
  * 会员service实现
@@ -88,7 +89,12 @@ public class VipServiceDaoImpl implements IVipService {
 	//--根据userId查找当前未到期vip
 	@Override
 	public Vip findVipByUserId(int userId) {
-		return vipDao.findByUserIdAndStatus(userId, true).get(0);
+		if(vipDao.findByUserIdAndStatus(userId, true).size()==0) {
+			return null;
+		}else {
+			return vipDao.findByUserIdAndStatus(userId, true).get(0);
+		}
+
 	}
 
 }

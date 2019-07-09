@@ -88,7 +88,7 @@ img.head{
     color: rgb(100,100,100);
 }
 .active{
-    border: 1px solid red;box-sizing: border-box;
+    border: 1px solid rgb(100,100,193);box-sizing: border-box;
 }
 .line-one{
     margin-top: 10px;
@@ -124,17 +124,22 @@ img.head{
     position: relative;
     border: 1px solid rgb(220,220,220);box-sizing: border-box;
 }
-.pay-ma{
-    width: 100px;height: 100px;
-    position: absolute;
-    left: 20px;
-    top: 20px;
-}
 .pay-desc{
     width: 735px;height:142px;
-    margin-left: 140px;
+    margin-left: 40px;
     position: absolute;
 }
 .pay-price{
     font-size: 44px;
+}
+.pay-button{
+	float:right;
+	margin-right:40px;
+	margin-top:100px;	
+	height:30px;
+	width:80px;
+	background-color:rgb(1,160,232);
+	color:white;
+	font-size:16px;
+}
 }

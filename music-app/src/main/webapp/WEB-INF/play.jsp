@@ -7,7 +7,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>播放</title>
+    <title>播放——${song.getSongName() }-${song.getSongAuthor() }</title>
+        <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="assets/css/play.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <script src="assets/js/jquery.js"></script>

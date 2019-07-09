@@ -7,6 +7,7 @@
 <head>
 <meta charset="UTF-8">
 <title>搜索</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 <link rel="stylesheet" href="assets/css/search.css">
 <script src="assets/js/jquery.js"></script>
 <link rel="stylesheet" href="assets/css/header.css">
